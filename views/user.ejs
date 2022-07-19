@@ -14,9 +14,12 @@
     <div class="card">
       <div class="card-header d-flex justify-content-center"><h2>Dados do Usuário</h2></div>
       <div class="card-body d-flex flex-column justify-content-center align-items-center">
-        <h3>ID: <%=id%></h3>
-        <h4>Nome: <%=name%></h4>
-        <h4>Telefone: <%=phone%></h4>
+        <% for(let user of users) { %>
+          <h3>ID: <%=user.id%></h3>
+          <h4>Nome: <%=user.name%></h4>
+          <h4>Telefone: <%=user.phone%></h4>
+          <hr>
+        <%}%>
       </div>
     </div>
 </body>
