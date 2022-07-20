@@ -4,29 +4,34 @@ const app = express()
 const PORT = 3000
 const path = require('path')
 
-let users = [
+let employees = [
   {
     id: 0,
-    name: "Rômulo Sobrinho",
-    phone: "9999-9999"
+    name: "João Henrique",
+    salary: 5000
   },
   {
     id: 1,
-    name: "Renata Lemes",
-    phone: "8888-8888"
+    name: "Renata Morais",
+    salary: 6000
   },
   {
     id: 2,
     name: "Maria Lívia",
-    phone: "7777-7777"
+    salary: 7000
   },
+  {
+    id: 3,
+    name: "Jonas Bruno",
+    salary: 4000
+  }
 ]
 
 app.set("views", path.join(__dirname, 'views'))
 app.set("view engine", "ejs")
 
 app.get("/", (req, res) => {
-  res.render('user', {users:users})
+  res.render('employees', {employees:employees})
 })
 
 app.listen(PORT, () => {
